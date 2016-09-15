@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from bookmarks.views import Index
+admin.autodiscover()
 
 urlpatterns = [
+    url(r'^$', Index.as_view(), name='home'),
     url(r'^admin/', admin.site.urls),
 ]
