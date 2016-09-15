@@ -69,7 +69,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_bookmarks.wsgi.application'
 
-
+STATICFILES_DIRS = (
+        os.path.join(os.path.dirname(__file__),
+            'static',
+            ),
+        )
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
